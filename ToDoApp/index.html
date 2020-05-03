@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css">
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+      <div id = "todo">
+        <div id="new_item">
+        <input 
+          v-model="item" 
+          autofocus
+          placeholder="What do you want to do?"
+          @keyup.enter="add"
+         />
+        <button v-on:click="clear">Clear</button>
+        </div>
+        
+        <div id="items">
+            <todo-item
+              v-for="item in todos"
+              v-bind:todo="item"
+            ></todo-item>
+        </div>
+      </div>
+      <script src="index.js"></script>
+  </body>
+</html>
