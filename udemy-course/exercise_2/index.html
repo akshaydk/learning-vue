@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css">
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+      
+      <div id="app">
+        <input type="text" v-on:keyup="keyUp">
+        Output:{{ input }}
+        <br><br>
+        
+        <input type="text" v-on:keyup.ctrl.enter="keyUp">
+        Output:{{ input }}        
+        <br><br>
+        
+        <form action ="" method="GET" v-on:submit.prevent>        
+              <input type="submit" value="Submit">
+        </form>
+          
+      </div> 
+      <script src="index.js"></script>
+  </body>
+</html>
