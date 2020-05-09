@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css">
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+      
+      <div id="app">
+          <input type="password" placeholder="Enter Password" v-model="password">
+          
+          <p v-if="password.length >=8">Awesome! </p>
+          <p v-else-if="password.length == 0"> Please enter a password </p>
+          <p v-else="password.length"> Please enter longer password </p>
+          
+          <ol>
+            <li v-for="category in categories">
+              {{ category.name }}
+              <ul v-for="sub in category.sub">
+                <li> {{ sub }} </li>
+              </ul>
+            </li>
+          </ol>          
+          
+      </div> 
+      <script src="index.js"></script>
+  </body>
+</html>
