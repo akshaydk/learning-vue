@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css">
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+      
+      <div id="app">
+          <ol>
+              <li v-for="m in formattedMovies"> {{ m }} </li>
+          </ol>          
+          
+          <button v-on:click="addMovie()"> Add movie </button>
+      </div> 
+      <script src="index.js"></script>
+  </body>
+</html>
